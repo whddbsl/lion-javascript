@@ -24,6 +24,7 @@ let whichFalsy = true && ' ' && [] && {thisIsFalsy: false};
 
 
 
+
 // 첫번째 Truthy를 찾는 연산 (||)
 let whichTruthy = false || '' || [2,3].length || {thisIsTruthy:true};
 

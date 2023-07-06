@@ -102,6 +102,12 @@ function getDay(dayValue){
 }
 
 
+// const today = getDay(getRandom(7))
+
+
+
+
+
 function isWeekend(dayValue){
   const today = getDay(getRandom(dayValue)); 
 
