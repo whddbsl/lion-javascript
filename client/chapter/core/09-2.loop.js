@@ -105,6 +105,23 @@ console.log( prev(second) );
 
 
 
+// let loginCount = 0;
+
+// if(로그인){
+
+//   if(본인인증){
+//     if(비밀번호찾기){
+//       if(본인인증){
+//         if(비밀번호바꾸기){
+          
+//         }
+//       }
+//     }
+//   }
+//   loginCount += 2;
+// }
+
+
 
 
 
