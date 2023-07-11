@@ -204,6 +204,7 @@ const MASTER = (function (g){
   let uid = 'Ajttk753!@'
 
   return {
+    name,
     getKey(){
       return uid;
     },
