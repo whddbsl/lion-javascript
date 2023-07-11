@@ -2,6 +2,9 @@
 /* Functions → Arrow      */
 /* ---------------------- */
 
+// 'use strict'
+
+
 const calculateTotal = function(moneyA, moneyB, moneyC, moneyD) {
   // arguments
   return moneyA + moneyB + moneyC + moneyD;
@@ -160,16 +163,6 @@ const user = {
 
 
 
-
-function aa(){
-
-  function bb(){
-
-  }
-
-  bb()
-
-}
 
 
 
