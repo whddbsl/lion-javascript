@@ -29,13 +29,3 @@ input.addEventListener('input',()=>{
 
 
 
-
-
-
-
-
-
-
-
-
-

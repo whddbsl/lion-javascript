@@ -98,6 +98,15 @@ const yumi = new Champion({
 
 
 
+class Tab extends React.Component{
+
+  render(){
+    return (
+      <div></div>
+    )
+  }
+}
+
 
 
 
@@ -139,7 +148,7 @@ class Button {
     this.todoList.push(value);
   }
 
-  createList(){
+  #createList(){
     let template = `
       <li>${this.data}</li>
     `
@@ -147,7 +156,7 @@ class Button {
   }
 
   render(){ 
-    this.list.insertAdjacentHTML('beforeend',this.createList());
+    this.list.insertAdjacentHTML('beforeend',this.#createList());
     this.target.value = ''
   }
   
@@ -217,6 +226,54 @@ const button = new Button({
 
 
 
+
+
+
+
+
+
+class VirtualDomRoot {
+  constructor(rootElement) {
+    this.rootElement = rootElement;
+  }
+
+  #parseVNode(vNode) {
+    const { type, props } = vNode;
+
+    const element = document.createElement(type);
+
+    console.log(props);
+    const children = props.children;
+    delete props.children;
+
+    Object.entries(props).forEach(([key, value]) => {
+      if (key === 'className') {
+        element.classList.add(value);
+      } else {
+        element.setAttribute(key, value);
+      }
+    });
+
+    children.forEach((child) => {
+      if (typeof child === 'string') {
+        element.append(child);
+      } else {
+        element.append(this.#parseVNode(child));
+      }
+    });
+
+    return element;
+  }
+
+  render(vNode) {
+    const parsedElements = this.#parseVNode(vNode);
+    this.rootElement.append(parsedElements);
+  }
+
+  umount() {
+    Array.from(this.rootElement.children).forEach((child) => child.remove());
+  }
+}
 
 
 
