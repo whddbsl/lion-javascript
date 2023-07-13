@@ -21,12 +21,12 @@
 // const value = sum();
 
 
-function first(){
-  let x = 10;
+function first(xValue = 10){
+  let x = xValue;
 
 
-  function second(){
-    let y = 5;
+  function second(secondValue = 5){
+    let y = secondValue;
     
     return x + y;
   }
@@ -36,8 +36,9 @@ function first(){
 
 // currying function 
 
-const value = first() // 15
+const value = first(10) // 15
 
+value()
 
 
 // const a = (b)=>(c)=>(d)=> b+c+d
@@ -56,6 +57,70 @@ function counter(){
 
 
 let result = counter();
+let result2 = counter();
+let result3 = counter();
+let result4 = counter();
+
+
+
+
+
+
+const bindEvent = (node,type,handler)=>{
+
+  if(typeof node === 'string'){
+    node = document.querySelector(node);
+  }
+
+
+  
+
+
+  node.addEventListener('click',handler);
+
+
+  return ()=> node.removeEventListener(type,handler);
+  
+}
+
+
+
+function handleClick(){
+  console.log('hit');
+}
+
+
+const remove = bindEvent('.first','click',handleClick);
+
+
+setTimeout(() => {
+
+  remove()
+
+}, 3000);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
