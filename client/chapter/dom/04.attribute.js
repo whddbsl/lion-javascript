@@ -65,6 +65,7 @@ console.log( first.dataset.animation = 'paused' ); // setter
 
 
 
+
 const value = attr('.first','class') // getter
 
 console.log( value );
