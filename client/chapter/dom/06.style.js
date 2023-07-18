@@ -51,6 +51,40 @@ console.log( first.style.backgroundColor ); // getter
 // - getComputedStyle(element, [pseudoElement]) `읽기 전용`
 
 
+console.log( getComputedStyle(first).fontSize );
+console.log( getComputedStyle(first).getPropertyValue('font-size') );
+
+
+
+
+// 객체의 속성에 접근할 때 .표기법은 사용할 수 없다.
+// computed property [ ]
+
+
+
+
+
+// setCss('.first','color','#fff'); 
+
+console.log( css('.first','background-color', 'red') );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
