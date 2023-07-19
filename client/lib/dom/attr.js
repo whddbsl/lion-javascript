@@ -104,6 +104,9 @@ function setAttr(node, prop, value) {
 const arrowAttr = (node, prop, value) =>
   !value ? getAttr(node, prop) : setAttr(node, prop, value);
 
+
+
+
 function attr(node, prop, value) {
   // if(!value){
   //   return getAttr(node,prop);
@@ -113,3 +116,16 @@ function attr(node, prop, value) {
 
   return !value ? getAttr(node, prop) : setAttr(node, prop, value);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
