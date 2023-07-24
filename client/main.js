@@ -1,3 +1,9 @@
-console.log('hello js!');
 
+
+import { diceAnimation } from "./lib/index.js";
+
+
+
+
+diceAnimation()
 
