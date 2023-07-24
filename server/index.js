@@ -6,7 +6,7 @@ const params = {
   port:5500,
   host:'localhost',
   root:'./client',
-  open:false
+  open:false,
 }
 
 liveServer.start(params);
